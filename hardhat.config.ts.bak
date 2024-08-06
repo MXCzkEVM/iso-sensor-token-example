@@ -1,0 +1,50 @@
+import '@nomicfoundation/hardhat-toolbox';
+
+import {HardhatUserConfig} from 'hardhat/config';
+
+export const archivedDeploymentPath = './deployments/archive';
+
+const real_accounts = [
+  process.env.DEPLOYER_KEY || '',
+] as string[]
+
+type HttpNetworkAccountsUserConfig = /*unresolved*/ any
+
+const config: HardhatUserConfig = {
+  solidity: {
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 200,
+      },
+      outputSelection: {
+        '*': {
+          '*': ['storageLayout'],
+        },
+      },
+    },
+    version: '0.8.18',
+  },
+  mocha: {
+    timeout: 300000,
+  },
+  networks: {
+    mxc_mainnet: {
+      url: 'https://rpc.moonchain.com',
+      chainId: 18686,
+      accounts: real_accounts,
+    },
+    mxc_testnet: {
+      url:
+          process.env.MXC_TESTNET_URL || 'http://geneva-rpc.moonchain.com:8545',
+      chainId: 5167004,
+      accounts: [process.env.DEPLOYER_KEY] as HttpNetworkAccountsUserConfig |
+          undefined,
+    },
+  },
+  paths: {
+    sources: './contracts',
+  },
+};
+
+export default config;
