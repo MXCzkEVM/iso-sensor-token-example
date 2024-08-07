@@ -25,7 +25,7 @@ const gProxyAddressMep804: string|undefined = process.env.PROXY_MEP804;
 type DbEnvironments = 'development'|'production';
 const gNodeMode: DbEnvironments = (process.env.NODE_ENV == 'production') ? 'production' : 'development';
 
-const gChirpvmApiUrl = process.env.CHIRPVM_API_URL || 'https://chirpvm.matchx.io/iso-api';
+const gChirpvmApiUrl = process.env.CHIRPVM_API_URL || 'https://chirpvm.matchx.io/iso/api';
 const gTargetApplicationIdx: bigint|undefined =
     process.env.TARGET_APPLICATION_IDX ? BigInt(process.env.TARGET_APPLICATION_IDX) : undefined;
 
