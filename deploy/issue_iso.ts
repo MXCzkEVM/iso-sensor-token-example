@@ -70,7 +70,7 @@ async function main() {
   // Create Applicaiton
   const create_tnx = await proxy_mep801.getFunction('createApplication').send(token_name);
   await create_tnx.wait();
-  const event_list = await proxy_mep801.queryFilter("ApplicationCreated", -100)
+  const event_list = await proxy_mep801.queryFilter("ApplicationCreated", -1);
   var parsedEvents = event_list.map(function(log) {return proxy_mep801.interface.parseLog(log)});
   if (!parsedEvents) {
     console.log("Error. Failed to get event log.");
