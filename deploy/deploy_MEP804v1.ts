@@ -10,7 +10,7 @@ async function main() {
 
   // Deploy
   const token_name = "Temperature Coin 2";
-  const token_symbol = "TCoin2";
+  const token_symbol = "TC2";
 
   const initial_amount = ethers.parseEther("100000");
 

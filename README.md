@@ -117,13 +117,17 @@ npx hardhat --network mxc_testnet run scripts/test_proxy.ts
 
 ## Rewarding Service
 
-The rewarding service will process the sensor data received from ChirpVM and calculate the reward. The data, along with the reward, will then be submitted to the Moonchain. Typically, this calculation occurs once every few hours.
+The rewarding service processes sensor data received from ChirpVM and calculates the corresponding reward. This data, along with the calculated reward, is then submitted to Moonchain, with the calculation typically occurring every few hours.
 
-After receiving the reward, the sensor owner can claim their sensor token. A common practice is to claim tokens once a day or every few days.
+Once the reward is received, the sensor owner can claim their sensor tokens, usually doing so once a day or every few days.
 
 ![BlockDiagram](doc/BlockDiagram.png)
 
+In this example, the service gathers active sensor data from ChirpVM, which is sending temperature readings (`temp_0`). It then grants a sensor token to the sensor owner.
 
+
+
+### Run the service
 
 Set the private key for rewarding service.
 
