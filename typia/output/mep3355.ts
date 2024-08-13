@@ -199,11 +199,11 @@ export function Mep3355DataPrepare(aType: string, aContent: string): Mep3355Data
     const uncompressed = Buffer.from(aContent);
     const compressed = _compress(uncompressed);
     return {
-        type: aType, content: Buffer.from(compressed).toString('base64'), compression: 'brolti',
+        type: aType, content: Buffer.from(compressed).toString('base64'), compression: 'brotli',
     };
 }
 export function Mep3355DataExtract(aInput: Mep3355Data): string {
-    if (aInput.compression == 'brolti') {
+    if (aInput.compression == 'brotli') {
         const data = _decompress(Buffer.from(aInput.content, 'base64'));
         const decoded = Buffer.from(data).toString('utf-8');
         return decoded;
