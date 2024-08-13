@@ -1,4 +1,4 @@
-# Issue a ISO Sensor Token on Moonchain
+# Issue a ISO Sensor Token with Rewarding System on Moonchain
 
 This comprehensive tutorial demonstrates the process of issuing an ISO Sensor Token on the Moonchain blockchain. You will learn how to deploy a MEP804 (Sensor Token) smart contract and set up a system service for granting rewards based on sensor data transmitted from an X2E board. The tutorial will guide you through each step, from initial setup to final deployment, ensuring you understand the intricacies of blockchain technology and smart contracts. Additionally, you will gain insight into how sensor data can be utilized to trigger reward mechanisms, providing a practical application of the ISO Sensor Token in real-world scenarios. By the end of this tutorial, you will be well-equipped to deploy your own sensor tokens and integrate them with IoT devices for innovative and efficient data management solutions.
 
