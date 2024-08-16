@@ -285,3 +285,8 @@ Set the MEP804 (ERC20) contract address.
 After that, you can see the reward you earned.
 
 ![metamask_3](./assets/metamask_3.png)
+
+
+## Appendix
+
+Online brotli tool: https://facia.dev/tools/compress-decompress/brotli-decompress/
