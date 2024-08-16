@@ -30,7 +30,7 @@ Private key:
 
 ## Prepare an X2E board
 
-If you don't have an X2E board that sends temperature readings, please follow the instructions in [SetupX2E.md](https://github.com/MXCzkEVM/Moonchain-Issue-IsoSensorToken/blob/main/SetupX2E.md) to set one up for this tutorial.
+If you don't have an X2E board that sends temperature readings, please follow the instructions in [SetupX2E.md](./SetupX2E.md) to set one up for this tutorial.
 
 You will need the `pidZkevmHash` for the following steps, as it serves as the unique identifier for your X2E board on the Moonchain.
 
@@ -80,7 +80,31 @@ cast send 0x28479D68cD3ef5661BDB7505EFD1712D5D0951F6 "burnSensorNFT(uint256)" 0x
 
 
 
-## Build and deploy the ERC20 Token
+## Build and deploy the ERC20 Token / Example of ISO Sensor Token and Rewarding Service
+
+This is the an example project of ISO Sensor Token and rewarding service.
+
+### Sequence diagram of the ISO Example
+
+![Sequence-diagram](./assets/Sequenzdiagramm_ISO_Example.jpg)
+
+
+The contract is following the UUPS pattern for the upgrade ability. Contract implementation and Storage are using Inherited approach.
+
+Please reference to this example when modify for upgrade.
+
+https://github.com/MehdizadeMilad/sample-uups-proxy-upgrade-able-smart-contracts
+
+
+## Tested development environment
+
+- Ubuntu 22.04
+
+- nodejs v18.18.2
+
+- npm 9.8.1
+
+- yarn 1.22.22
 
 Download the MEP804 example to your working directory. Be sure to read the README file to set up the environment for smart contract compilation and deployment.
 
@@ -290,3 +314,4 @@ After that, you can see the reward you earned.
 ## Appendix
 
 Online brotli tool: https://facia.dev/tools/compress-decompress/brotli-decompress/
+
